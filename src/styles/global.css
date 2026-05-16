@@ -27,7 +27,6 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  padding: 2rem;
   background:
     radial-gradient(circle at 30% 0%, rgba(255, 250, 239, 0.68), transparent 32rem),
     radial-gradient(circle at 82% 22%, rgba(114, 73, 42, 0.08), transparent 28rem),
@@ -51,14 +50,14 @@ a {
 }
 
 .page-shell {
-  width: min(100%, 1280px);
-  min-height: 100vh;
-  margin: 0 auto;
+  width: min(100% - 48px, 1280px);
+  min-height: calc(100vh - 64px);
+  margin: 32px auto;
   background:
     radial-gradient(circle at 66% 18%, rgba(255, 255, 255, 0.88), transparent 29rem),
     radial-gradient(circle at 16% 42%, rgba(255, 246, 226, 0.72), transparent 32rem),
     linear-gradient(135deg, #fffcf6 0%, var(--paper) 45%, #f8efe0 100%);
-  border: 1px solid rgba(53, 0, 13, 0.13);
+  border: 1px solid rgba(53, 0, 13, 0.14);
   border-radius: 18px;
   box-shadow: 0 24px 70px rgba(53, 0, 13, 0.12);
   overflow: hidden;
@@ -309,15 +308,11 @@ a {
 }
 
 @media (max-width: 640px) {
-  body {
-    padding: 0;
-  }
-
   .page-shell {
-    min-height: 100vh;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    width: calc(100% - 20px);
+    min-height: calc(100vh - 20px);
+    margin: 10px auto;
+    border-radius: 12px;
   }
 
   .navbar {
