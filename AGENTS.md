@@ -47,12 +47,11 @@ Internal content width:
 - The outer shell can be wide, but content should not stretch all the way to the shell edges on large monitors.
 
 Hero layout:
-- Keep the hero editorial and spacious, but avoid excessive horizontal gaps.
-- Use a centered two-column grid for desktop hero composition:
-  - text column around `minmax(0, 760px)`
-  - visual column around `minmax(320px, 520px)`
-  - `column-gap: clamp(3rem, 5vw, 6rem)`
-- Do not push the hero visual to the far right edge; use `justify-self: center` or `start`.
+- Keep the hero editorial and spacious, matching the wider homepage composition.
+- Use the full `.container` width for the desktop hero grid:
+  - `grid-template-columns: minmax(0, 55fr) minmax(20rem, 45fr);`
+- Keep the copy aligned to the left side of the container and the visual aligned to the right side.
+- Do not center a narrower fixed-width hero composition inside the container.
 - Do not make the headline significantly larger than the current homepage headline.
 - Use the provided abstract block image asset for the hero visual rather than rebuilding it with CSS blocks.
 
