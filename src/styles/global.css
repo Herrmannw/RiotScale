@@ -179,7 +179,9 @@ a {
 }
 
 .hero-visual {
-  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   justify-self: end;
   width: min(100%, 29rem);
   height: clamp(17.5rem, 29vw, 24.25rem);
@@ -187,90 +189,12 @@ a {
   margin-right: clamp(0rem, 1vw, 0.75rem);
 }
 
-.bar {
-  position: absolute;
-  bottom: 0;
-  border-radius: 0.28rem 0.28rem 0 0;
-  box-shadow: 14px 22px 30px var(--shadow);
-}
-
-.bar::before {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent 42%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(53, 0, 13, 0.12));
-  content: "";
-}
-
-.bar-small {
-  left: 2%;
-  width: 25%;
-  height: 22%;
-  background: linear-gradient(135deg, #fffdf8, #d9ccb9);
-}
-
-.bar-mid {
-  left: 24%;
-  width: 27%;
-  height: 54%;
-  background: linear-gradient(135deg, #96002d 0%, #6e001d 45%, #35000d 100%);
-}
-
-.bar-light {
-  left: 47%;
-  width: 25%;
-  height: 76%;
-  background: linear-gradient(135deg, #fffaf1 0%, #eadfce 50%, #d1bea6 100%);
-}
-
-.bar-tall {
-  right: 4%;
-  width: 30%;
-  height: 92%;
-  background: linear-gradient(135deg, #93002b 0%, #65001a 44%, #30000c 100%);
-}
-
-.bar-mark {
-  position: absolute;
-  top: 22%;
-  right: 18%;
-  display: grid;
-  grid-template-columns: repeat(3, 0.36rem);
-  align-items: end;
-  gap: 0.21rem;
-  height: 3.8rem;
-}
-
-.bar-mark::before,
-.bar-mark::after,
-.bar-mark {
-  background-repeat: no-repeat;
-}
-
-.bar-mark::before,
-.bar-mark::after {
+.hero-visual img {
   display: block;
-  width: 0.36rem;
-  border-radius: 0.12rem;
-  background: #fff7e7;
-  content: "";
-}
-
-.bar-mark::before {
-  height: 1.85rem;
-}
-
-.bar-mark::after {
-  height: 2.9rem;
-}
-
-.bar-mark {
-  border-radius: 0.12rem;
-  background-image: linear-gradient(#fff7e7, #fff7e7);
-  background-position: right bottom;
-  background-size: 0.36rem 3.8rem;
+  width: min(100%, 29rem);
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 .why {
