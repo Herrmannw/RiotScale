@@ -25,55 +25,57 @@ const reasons = [
 ---
 
 <section class="why" aria-labelledby="why-title">
-  <div class="section-intro">
-    <p class="eyebrow">/ Why RiotScale</p>
-    <h2 id="why-title">Strategic. Data-Driven. Built to Perform.</h2>
-    <p>
-      We combine creative thinking with performance expertise to deliver marketing
-      that doesn't just look good, it drives real business results.
-    </p>
-  </div>
+  <div class="why-inner container">
+    <div class="section-intro">
+      <p class="eyebrow">/ Why RiotScale</p>
+      <h2 id="why-title">Strategic. Data-Driven. Built to Perform.</h2>
+      <p>
+        We combine creative thinking with performance expertise to deliver marketing
+        that doesn't just look good, it drives real business results.
+      </p>
+    </div>
 
-  <div class="reason-grid">
-    {
-      reasons.map((reason) => (
-        <article class="reason-card">
-          <span class="reason-icon">
-            {reason.icon === "target" && (
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <circle cx="16" cy="16" r="10"></circle>
-                <circle cx="16" cy="16" r="4"></circle>
-                <path d="M16 3v5M16 24v5M3 16h5M24 16h5"></path>
-              </svg>
-            )}
-            {reason.icon === "people" && (
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M12.5 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path>
-                <path d="M21.5 13.5a4 4 0 1 0 0-8"></path>
-                <path d="M4.5 27a8 8 0 0 1 16 0"></path>
-                <path d="M20.5 20a7 7 0 0 1 7 7"></path>
-              </svg>
-            )}
-            {reason.icon === "creative" && (
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M7 24.5 20.8 10.7a3.2 3.2 0 0 1 4.5 4.5L11.5 29H7v-4.5Z"></path>
-                <path d="m18.5 13 4.5 4.5"></path>
-                <path d="M8 7h7"></path>
-                <path d="M8 12h4"></path>
-              </svg>
-            )}
-            {reason.icon === "growth" && (
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M5 25h22"></path>
-                <path d="m7 20 6-6 5 4 8-10"></path>
-                <path d="M20 8h6v6"></path>
-              </svg>
-            )}
-          </span>
-          <h3>{reason.title}</h3>
-          <p>{reason.body}</p>
-        </article>
-      ))
-    }
+    <div class="reason-grid">
+      {
+        reasons.map((reason) => (
+          <article class="reason-card">
+            <span class="reason-icon">
+              {reason.icon === "target" && (
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <circle cx="16" cy="16" r="10"></circle>
+                  <circle cx="16" cy="16" r="4"></circle>
+                  <path d="M16 3v5M16 24v5M3 16h5M24 16h5"></path>
+                </svg>
+              )}
+              {reason.icon === "people" && (
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M12.5 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path>
+                  <path d="M21.5 13.5a4 4 0 1 0 0-8"></path>
+                  <path d="M4.5 27a8 8 0 0 1 16 0"></path>
+                  <path d="M20.5 20a7 7 0 0 1 7 7"></path>
+                </svg>
+              )}
+              {reason.icon === "creative" && (
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M7 24.5 20.8 10.7a3.2 3.2 0 0 1 4.5 4.5L11.5 29H7v-4.5Z"></path>
+                  <path d="m18.5 13 4.5 4.5"></path>
+                  <path d="M8 7h7"></path>
+                  <path d="M8 12h4"></path>
+                </svg>
+              )}
+              {reason.icon === "growth" && (
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M5 25h22"></path>
+                  <path d="m7 20 6-6 5 4 8-10"></path>
+                  <path d="M20 8h6v6"></path>
+                </svg>
+              )}
+            </span>
+            <h3>{reason.title}</h3>
+            <p>{reason.body}</p>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </section>
