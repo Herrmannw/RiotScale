@@ -3,20 +3,22 @@ const navItems = ["About Us", "Services", "Our Approach", "Case Studies", "Insig
 ---
 
 <header class="navbar" aria-label="Primary navigation">
-  <a class="brand" href="/" aria-label="RiotScale home">RIOTSCALE</a>
+  <div class="navbar-inner container">
+    <a class="brand" href="/" aria-label="RiotScale home">RIOTSCALE</a>
 
-  <nav class="nav-links" aria-label="Main menu">
-    {
-      navItems.map((item) => (
-        <a href="#" aria-label={`${item} section`}>
-          {item}
-        </a>
-      ))
-    }
-  </nav>
+    <nav class="nav-links" aria-label="Main menu">
+      {
+        navItems.map((item) => (
+          <a href="#" aria-label={`${item} section`}>
+            {item}
+          </a>
+        ))
+      }
+    </nav>
 
-  <div class="nav-actions">
-    <a class="button button-primary" href="#">Let's Talk</a>
-    <a class="button button-secondary" href="#">Client Login</a>
+    <div class="nav-actions">
+      <a class="button button-primary" href="#">Let's Talk</a>
+      <a class="button button-secondary" href="#">Client Login</a>
+    </div>
   </div>
 </header>
