@@ -52,6 +52,7 @@ Hero layout:
   - `grid-template-columns: minmax(0, 55fr) minmax(20rem, 45fr);`
 - Keep the copy aligned to the left side of the container and the visual aligned to the right side.
 - Do not center a narrower fixed-width hero composition inside the container.
+- The hero visual should feel intentionally composed, not isolated in empty space; use a subtle burgundy glow, soft panel, or shadow behind the block asset when needed.
 - Do not make the headline significantly larger than the current homepage headline.
 - Use the provided abstract block image asset for the hero visual rather than rebuilding it with CSS blocks.
 
