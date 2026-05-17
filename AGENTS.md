@@ -79,7 +79,7 @@ Initial scope:
 Later:
 4. Services
 5. Our Approach
-6. Case Studies
+6. Testimonials
 7. Insights
 8. Footer
 
@@ -94,7 +94,7 @@ Primary CTA:
 Explore Our Services
 
 Secondary CTA:
-View Case Studies →
+View Testimonials →
 
 Why section heading:
 Strategic. Data-Driven. Built to Perform.

@@ -7,10 +7,11 @@ const pageHref = (path = "") => {
 
 const navItems = [
   { label: "About Us", href: pageHref("about-us/") },
-  { label: "Services", href: "#" },
+  { label: "Services", href: pageHref("services/") },
   { label: "Our Approach", href: "#" },
-  { label: "Case Studies", href: "#" },
+  { label: "Testimonials", href: pageHref("testimonials/") },
   { label: "Insights", href: "#" },
+  { label: "Contact", href: pageHref("contact/") },
 ];
 ---
 
@@ -29,7 +30,7 @@ const navItems = [
     </nav>
 
     <div class="nav-actions">
-      <a class="button button-primary" href="#">Let's Talk</a>
+      <a class="button button-primary" href={pageHref("contact/")}>Let's Talk</a>
       <a class="button button-secondary" href="#">Client Login</a>
     </div>
   </div>

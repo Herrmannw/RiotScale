@@ -1,0 +1,227 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
+import "../styles/global.css";
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const services = [
+  ["Website Design", "Strategic, conversion-focused designs that communicate your value and convert visitors into customers.", "monitor"],
+  ["Public Relations", "Build credibility, earn media coverage, and strengthen your brand reputation with strategic PR.", "megaphone"],
+  ["Website Development", "Fast, secure, and scalable websites built for performance, SEO, and seamless user experience.", "code"],
+  ["SEO", "Increase organic visibility and drive qualified traffic with technical SEO, content, and link-building strategies.", "search"],
+  ["Paid Media", "ROI-focused ad campaigns across Google, Meta, LinkedIn, and more to drive leads and revenue.", "bars"],
+  ["Analytics & CRO", "Turn data into decisions. We optimize user journeys and conversion rates that impact your bottom line.", "chart"],
+];
+
+const process = [
+  ["Discover", "We learn your business, audience, and goals to identify opportunities."],
+  ["Strategize", "We craft a tailored plan with clear objectives and measurable KPIs."],
+  ["Execute", "Our team brings the strategy to life with precision and speed."],
+  ["Analyze", "We track performance using data and real-time insights to measure impact."],
+  ["Optimize", "We refine and scale what works to continuously improve results."],
+];
+
+const outcomes = [
+  ["250%+", "Average Increase in Organic Traffic"],
+  ["3.5x", "Average Increase in Lead Generation"],
+  ["40%", "Average Increase in Conversion Rate"],
+  ["98%", "Client Retention Rate"],
+];
+---
+
+<BaseLayout title="Services | RiotScale">
+  <div class="page-shell">
+    <Navbar />
+    <main>
+      <section class="services-hero">
+        <div class="services-hero-inner container">
+          <div class="services-copy">
+            <p class="eyebrow">/ Services</p>
+            <h1>Growth Services That Drive Results.</h1>
+            <p>
+              We partner with ambitious brands to create powerful digital
+              experiences, build authority, and drive measurable growth through
+              data-driven strategy and exceptional execution.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href={`${baseUrl}contact/`}>Let's Talk About Your Growth</a>
+              <a class="text-link" href={`${baseUrl}testimonials/`}>
+                View Testimonials
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13"></path>
+                  <path d="m13 6 6 6-6 6"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="device-showcase" aria-label="Website and mobile preview placeholder">
+            <div class="laptop-frame">
+              <div class="mock-nav">
+                <span>RIOTSCALE</span>
+                <small>Work</small>
+                <small>Services</small>
+                <small>About</small>
+              </div>
+              <h2>Elevating Brands. Driving Growth.</h2>
+              <p>A growth partner for forward-thinking brands ready to scale.</p>
+              <div class="mock-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="phone-frame">
+              <p>Strategy.<br />Content.<br />Results.</p>
+              <span></span>
+            </div>
+            <aside class="media-card media-card-top">
+              <small>Featured in</small>
+              <strong>Forbes</strong>
+              <strong>TechCrunch</strong>
+            </aside>
+            <aside class="media-card media-card-bottom">
+              <small>Media Coverage</small>
+              <strong>120+</strong>
+              <span>Placements Secured</span>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section">
+        <div class="services-intro container">
+          <div>
+            <p class="eyebrow">/ What We Do</p>
+            <h2>Full-Funnel Growth Services</h2>
+          </div>
+          <p>
+            From strategy to execution, our integrated services are designed to
+            attract, engage, and convert the right audience at every stage.
+          </p>
+        </div>
+
+        <div class="service-card-grid container">
+          {
+            services.map(([title, body, icon]) => (
+              <article class="service-card">
+                <span class="service-icon">
+                  {icon === "monitor" && (
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                      <rect x="5" y="7" width="22" height="16" rx="2"></rect>
+                      <path d="M12 27h8"></path>
+                      <path d="M16 23v4"></path>
+                    </svg>
+                  )}
+                  {icon === "megaphone" && (
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                      <path d="M7 18h5l11 5V9L12 14H7v4Z"></path>
+                      <path d="M12 18v7"></path>
+                    </svg>
+                  )}
+                  {icon === "code" && (
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                      <path d="m12 10-6 6 6 6"></path>
+                      <path d="m20 10 6 6-6 6"></path>
+                      <path d="m18 7-4 18"></path>
+                    </svg>
+                  )}
+                  {icon === "search" && (
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                      <circle cx="14" cy="14" r="8"></circle>
+                      <path d="m20 20 6 6"></path>
+                    </svg>
+                  )}
+                  {icon === "bars" && (
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                      <path d="M7 25V14"></path>
+                      <path d="M16 25V8"></path>
+                      <path d="M25 25V18"></path>
+                    </svg>
+                  )}
+                  {icon === "chart" && (
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                      <path d="M16 5v11h11"></path>
+                      <path d="M25 20a10 10 0 1 1-9-15"></path>
+                    </svg>
+                  )}
+                </span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{body}</p>
+                  <a class="mini-link" href={`${baseUrl}contact/`}>Learn More <span aria-hidden="true">-></span></a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="services-process container">
+        <div class="process-header">
+          <div>
+            <p class="eyebrow">/ How We Work</p>
+            <h2>A Proven Process. Predictable Results.</h2>
+          </div>
+          <p>
+            Our methodology combines strategy, creativity, data, and continuous
+            optimization to deliver measurable growth.
+          </p>
+        </div>
+        <div class="service-process-steps">
+          {
+            process.map(([title, body], index) => (
+              <article>
+                <span>{index + 1}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="service-outcomes container">
+        <div>
+          <p class="eyebrow">/ Outcomes That Matter</p>
+          <h2>Driving Impact for Ambitious Brands</h2>
+        </div>
+        {
+          outcomes.map(([number, label]) => (
+            <article>
+              <span></span>
+              <h3>{number}</h3>
+              <p>{label}</p>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="services-cta container">
+        <div>
+          <p class="eyebrow">/ Ready To Grow?</p>
+          <h2>Let's Build What's Next.</h2>
+          <p>
+            Tell us about your goals and we'll show you how RiotScale can help
+            you achieve them.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-secondary" href={`${baseUrl}contact/`}>Let's Talk</a>
+          <a class="text-link" href={`${baseUrl}testimonials/`}>
+            See Testimonials
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+        <img src={blocksImage.src} alt="" loading="lazy" decoding="async" />
+      </section>
+    </main>
+  </div>
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const redirectUrl = `${baseUrl}thank-you/`;
+const services = [
+  "Website Design",
+  "SEO",
+  "Google Business Profile",
+  "Lead Generation",
+  "Automation",
+  "Not Sure Yet",
+];
+---
+
+<BaseLayout title="Contact RiotScale">
+  <div class="page-shell">
+    <Navbar />
+    <main>
+      <section class="contact-page">
+        <div class="contact-inner container">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h1>Let's figure out what your business needs online.</h1>
+            <p>
+              Tell us what you're trying to improve. We'll review your current
+              digital presence and reach out with next steps.
+            </p>
+          </div>
+
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Riotscale Lead" />
+            <input type="hidden" name="from_name" value="Riotscale Website" />
+            <input type="hidden" name="redirect" value={redirectUrl} />
+            <input type="checkbox" name="botcheck" style="display: none;" />
+
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+
+              <label>
+                <span>Business Name</span>
+                <input type="text" name="business_name" autocomplete="organization" />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" autocomplete="tel" />
+              </label>
+
+              <label>
+                <span>Website URL</span>
+                <input type="url" name="website_url" autocomplete="url" />
+              </label>
+
+              <label>
+                <span>Service Needed</span>
+                <select name="service_needed" required>
+                  <option value="">Select a service</option>
+                  {services.map((service) => <option value={service}>{service}</option>)}
+                </select>
+              </label>
+            </div>
+
+            <label class="form-message">
+              <span>Message</span>
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <button class="button button-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
