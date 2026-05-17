@@ -1,5 +1,11 @@
 ---
-const navItems = ["About Us", "Services", "Our Approach", "Case Studies", "Insights"];
+const navItems = [
+  { label: "About Us", href: "/about/" },
+  { label: "Services", href: "#" },
+  { label: "Our Approach", href: "#" },
+  { label: "Case Studies", href: "#" },
+  { label: "Insights", href: "#" },
+];
 ---
 
 <header class="navbar" aria-label="Primary navigation">
@@ -9,8 +15,8 @@ const navItems = ["About Us", "Services", "Our Approach", "Case Studies", "Insig
     <nav class="nav-links" aria-label="Main menu">
       {
         navItems.map((item) => (
-          <a href="#" aria-label={`${item} section`}>
-            {item}
+          <a href={item.href} aria-label={`${item.label} section`}>
+            {item.label}
           </a>
         ))
       }
