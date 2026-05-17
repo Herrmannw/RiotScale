@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  base: process.env.PUBLIC_BASE_PATH || "/",
+  site: "https://herrmannw.github.io",
+  base: process.env.PUBLIC_BASE_PATH || "/RiotScale",
 });
