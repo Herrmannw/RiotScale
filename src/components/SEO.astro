@@ -1,0 +1,45 @@
+---
+// TODO before launch: confirm the final production domain.
+const defaultSiteUrl = "https://riotscale.com";
+// TODO before launch: replace this with a real branded Open Graph image.
+const defaultOgImage = "/og-image.png";
+// TODO before launch: refine the final business description if positioning changes.
+const defaultDescription =
+  "RiotScale helps ambitious businesses unlock growth through data-driven marketing, performance creative, and measurable strategy.";
+
+const {
+  title = "RiotScale | Data-Driven Marketing for Ambitious Brands",
+  description = defaultDescription,
+  canonical = "/",
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = defaultOgImage,
+  ogUrl = canonical,
+  ogType = "website",
+  twitterCard = "summary_large_image",
+} = Astro.props;
+
+const absoluteUrl = (value) => {
+  if (!value) return undefined;
+  return new URL(value, defaultSiteUrl).toString();
+};
+
+const canonicalUrl = absoluteUrl(canonical);
+const openGraphUrl = absoluteUrl(ogUrl);
+const openGraphImage = absoluteUrl(ogImage);
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+{openGraphImage && <meta property="og:image" content={openGraphImage} />}
+{openGraphUrl && <meta property="og:url" content={openGraphUrl} />}
+<meta property="og:type" content={ogType} />
+
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={ogTitle} />
+<meta name="twitter:description" content={ogDescription} />
+{openGraphImage && <meta name="twitter:image" content={openGraphImage} />}

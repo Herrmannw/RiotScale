@@ -1,7 +1,16 @@
 ---
+import SEO from "../components/SEO.astro";
+
 const {
   title = "RiotScale",
   description = "RiotScale helps ambitious businesses unlock growth through data-driven marketing, performance creative, and measurable strategy.",
+  canonical = "/",
+  ogTitle = title,
+  ogDescription = description,
+  ogImage,
+  ogUrl = canonical,
+  ogType = "website",
+  twitterCard = "summary_large_image",
 } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL.endsWith("/")
@@ -14,10 +23,19 @@ const faviconHref = `${baseUrl}favicon.svg`;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
-    <title>{title}</title>
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogTitle={ogTitle}
+      ogDescription={ogDescription}
+      ogImage={ogImage}
+      ogUrl={ogUrl}
+      ogType={ogType}
+      twitterCard={twitterCard}
+    />
   </head>
   <body>
     <slot />

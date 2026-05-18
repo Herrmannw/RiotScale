@@ -8,7 +8,11 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<BaseLayout title="Thank You | RiotScale">
+<BaseLayout
+  title="Thank You | RiotScale"
+  description="Your message has been sent to RiotScale. The team will review your details and follow up with next steps."
+  canonical="/thank-you/"
+>
   <div class="page-shell">
     <Navbar />
     <main>
