@@ -33,5 +33,25 @@ const navItems = [
       <a class="button button-primary" href={pageHref("contact/")}>Let's Talk</a>
       <a class="button button-secondary" href="#">Client Login</a>
     </div>
+
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+
+      <nav class="mobile-menu-panel" aria-label="Mobile menu">
+        {
+          navItems.map((item) => (
+            <a href={item.href} aria-label={`${item.label} section`}>
+              {item.label}
+            </a>
+          ))
+        }
+        <a class="button button-primary" href={pageHref("contact/")}>Let's Talk</a>
+        <a class="button button-secondary" href="#">Client Login</a>
+      </nav>
+    </details>
   </div>
 </header>
