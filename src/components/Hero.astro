@@ -1,14 +1,39 @@
 ---
-import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
-
 const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+
+const services = [
+  {
+    title: "Website Design",
+    body: "Conversion-focused websites that build trust and drive action.",
+  },
+  {
+    title: "Local SEO",
+    body: "Get found by local searchers and turn them into customers.",
+  },
+  {
+    title: "Reputation Growth",
+    body: "Turn reviews into trust, credibility, and five-star competitors.",
+  },
+  {
+    title: "Lead Capture Systems",
+    body: "Smart lead forms, automations, and CRM that convert more.",
+  },
+];
+
+const stats = [
+  { value: "100+", label: "Businesses Scaled" },
+  { value: "2.4X", label: "Average ROI Increase" },
+  { value: "$50M+", label: "Revenue Generated" },
+  { value: "4.9", label: "Average Client Rating" },
+];
 ---
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-inner container">
     <div class="hero-content">
+      <p class="hero-kicker">Build your presence. Generate more leads. Grow faster.</p>
       <h1 id="hero-title">
         <span>Scale Your Brand.</span>
         <span>Maximize Impact.</span>
@@ -31,7 +56,55 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <img src={blocksImage.src} alt="" loading="eager" decoding="async" />
+      <div class="visual-orbit"></div>
+      <div class="browser-card">
+        <div class="browser-top"><span></span><span></span><span></span></div>
+        <div class="business-row"><strong>R</strong><span>Your Business</span></div>
+        <div class="image-placeholder"></div>
+        <div class="content-lines"><span></span><span></span><span></span></div>
+        <div class="thumb-row"><i></i><i></i><i></i></div>
+      </div>
+      <div class="quote-card">
+        <strong>Get a Free Quote</strong>
+        <span></span><span></span><span></span><span></span>
+        <b>Send Request</b>
+      </div>
+      <div class="review-card">
+        <strong>G</strong>
+        <span>4.9 ★★★★★</span>
+        <small>Based on 120+ reviews</small>
+      </div>
+      <div class="leads-card">
+        <span>New Leads</span>
+        <strong>+132</strong>
+        <small>↑ 23% from last month</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-strip container" aria-label="Core services">
+    {
+      services.map((service) => (
+        <article class="service-tile">
+          <span aria-hidden="true"></span>
+          <h2>{service.title}</h2>
+          <p>{service.body}</p>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="stats-band" aria-label="RiotScale results">
+    <div class="stats-inner container">
+      {
+        stats.map((stat) => (
+          <article class="home-stat">
+            <span aria-hidden="true"></span>
+            <strong>{stat.value}</strong>
+            <p>{stat.label}</p>
+          </article>
+        ))
+      }
     </div>
   </div>
 </section>
