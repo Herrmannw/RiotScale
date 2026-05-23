@@ -78,10 +78,8 @@ Initial scope:
 
 Later:
 4. Services
-5. Our Approach
-6. Testimonials
-7. Insights
-8. Footer
+5. Testimonials
+6. Footer
 
 ## Copy
 Hero headline:
