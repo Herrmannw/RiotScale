@@ -83,7 +83,6 @@ a {
 }
 
 .nav-links,
-.nav-actions,
 .hero-actions {
   display: flex;
   align-items: center;
@@ -94,11 +93,6 @@ a {
   gap: clamp(1.25rem, 3vw, 2.9rem);
   font-size: 0.92rem;
   font-weight: 850;
-}
-
-.nav-actions {
-  justify-content: flex-end;
-  gap: 0.65rem;
 }
 
 .mobile-menu {
@@ -214,10 +208,10 @@ a {
 .about-hero-inner {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
-  gap: clamp(3rem, 6vw, 7rem);
+  gap: clamp(2.25rem, 4.5vw, 5rem);
   align-items: center;
-  min-height: clamp(24rem, 37vw, 31rem);
-  padding-block: clamp(3.25rem, 6vw, 5.5rem);
+  min-height: clamp(21rem, 32vw, 27rem);
+  padding-block: clamp(2.4rem, 4.5vw, 4rem);
 }
 
 .about-hero-copy {
@@ -251,14 +245,14 @@ a {
 
 .about-hero-copy > p:not(.eyebrow) {
   max-width: 41rem;
-  margin: 1.5rem 0 0;
+  margin: 1.15rem 0 0;
   font-size: clamp(1rem, 0.8vw + 0.86rem, 1.14rem);
-  line-height: 1.72;
+  line-height: 1.62;
 }
 
 .about-studio {
   position: relative;
-  min-height: clamp(17rem, 27vw, 24rem);
+  min-height: clamp(15rem, 23vw, 20rem);
   overflow: hidden;
   border: 1px solid rgba(53, 0, 13, 0.12);
   border-radius: 0.5rem;
@@ -306,13 +300,17 @@ a {
 
 .about-band {
   border-bottom: 1px solid var(--line);
-  padding-block: clamp(3rem, 5vw, 4.8rem);
+  padding-block: clamp(2.2rem, 4vw, 3.6rem);
+}
+
+.values-band {
+  padding-block: clamp(1.35rem, 2.6vw, 2.35rem);
 }
 
 .story-grid {
   display: grid;
   grid-template-columns: minmax(16rem, 0.82fr) minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 5.5rem);
+  gap: clamp(1.5rem, 3.2vw, 3.6rem);
 }
 
 .story-grid h2,
@@ -325,22 +323,27 @@ a {
 .process-step p {
   margin: 0;
   font-size: 0.92rem;
-  line-height: 1.75;
+  line-height: 1.62;
 }
 
 .story-copy p + p {
-  margin-top: 1.25rem;
+  margin-top: 0.85rem;
 }
 
 .values-grid {
   display: grid;
-  grid-template-columns: 0.7fr repeat(4, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: clamp(1.25rem, 3vw, 3.4rem);
+  row-gap: clamp(0.85rem, 1.5vw, 1.4rem);
   align-items: start;
 }
 
+.values-grid > .eyebrow {
+  grid-column: 1 / -1;
+}
+
 .value-card {
-  min-height: 12rem;
+  min-height: 9rem;
   padding-inline: clamp(0rem, 1.5vw, 1.5rem);
   border-left: 1px solid rgba(53, 0, 13, 0.12);
   text-align: center;
@@ -348,8 +351,8 @@ a {
 
 .value-icon {
   display: inline-flex;
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 3.65rem;
+  height: 3.65rem;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
@@ -358,8 +361,8 @@ a {
 }
 
 .value-icon svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -371,22 +374,22 @@ a {
 .team-card h3,
 .process-step h3,
 .milestone h3 {
-  margin: 1rem 0 0;
+  margin: 0.75rem 0 0;
   font-size: 1rem;
 }
 
 .value-card p {
   max-width: 18rem;
-  margin: 0.8rem auto 0;
+  margin: 0.55rem auto 0;
   font-size: 0.84rem;
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.25rem, 2.4vw, 2.1rem);
-  margin-top: 1.15rem;
+  gap: clamp(1rem, 2vw, 1.7rem);
+  margin-top: 0.85rem;
 }
 
 .team-card {
@@ -399,7 +402,7 @@ a {
 
 .team-portrait {
   display: grid;
-  min-height: 12rem;
+  min-height: 10rem;
   place-items: center;
   background:
     radial-gradient(circle at 72% 30%, rgba(122, 0, 32, 0.14), transparent 7rem),
@@ -424,7 +427,7 @@ a {
   align-items: end;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.95rem 1rem;
+  padding: 0.8rem 0.9rem;
 }
 
 .team-meta h3,
@@ -445,7 +448,7 @@ a {
 .process-grid {
   display: grid;
   grid-template-columns: minmax(16rem, 0.9fr) repeat(4, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3vw, 3rem);
+  gap: clamp(1.25rem, 2.4vw, 2.4rem);
 }
 
 .process-intro {
@@ -466,11 +469,11 @@ a {
 }
 
 .process-step h3 {
-  margin-top: 1.35rem;
+  margin-top: 1rem;
 }
 
 .process-step p {
-  margin-top: 0.45rem;
+  margin-top: 0.35rem;
   font-size: 0.78rem;
 }
 
@@ -483,7 +486,7 @@ a {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.05rem;
 }
 
 .journey-line::before {
@@ -498,7 +501,7 @@ a {
 
 .milestone {
   position: relative;
-  padding-top: 1.45rem;
+  padding-top: 1.2rem;
 }
 
 .milestone span {
@@ -1396,8 +1399,7 @@ a {
     min-height: 5rem;
   }
 
-  .nav-links,
-  .nav-actions {
+  .nav-links {
     display: none;
   }
 
@@ -1585,11 +1587,6 @@ a {
   border-bottom: 1px solid rgba(53, 0, 13, 0.1);
 }
 
-.nav-actions .button {
-  min-height: 2.7rem;
-  padding-inline: 1.45rem;
-}
-
 .hero {
   border-top: 0;
   border-bottom: 0;
@@ -1623,6 +1620,7 @@ a {
 
 .hero h1 {
   max-width: 14ch;
+  margin: 0;
   font-size: clamp(3.6rem, 4.15vw, 5rem);
   font-weight: 920;
   line-height: 0.98;
