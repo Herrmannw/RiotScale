@@ -18,32 +18,25 @@ const logos = [
 ];
 
 const testimonials = [
-  ["Michael Thompson", "CEO", "BrightPath Learning", "The team at RiotScale is responsive, strategic, and truly invested in our success. Our pipeline has never been stronger."],
-  ["Rachel Adams", "Marketing Director", "Elevate Fitness", "Their paid media strategy and conversion optimization increased our ROAS by 176% in just 90 days."],
-  ["David Chen", "Founder", "Summit Financial", "RiotScale brings clarity, creativity, and measurable outcomes to every campaign. They're a true growth partner."],
-  ["Lauren Patel", "Head of Marketing", "Pinecrest Realty", "From SEO to paid search, everything they touch moves the needle. We've seen a 3X increase in organic traffic."],
-  ["James Walker", "Operations Manager", "ClearWater Plumbing", "Professional, transparent, and results-driven. RiotScale helped us scale efficiently without wasting budget."],
-  ["Emily Rodriguez", "Growth Marketing Manager", "Northline Home Services", "Our cost per lead dropped 42% while lead quality improved dramatically. We couldn't be happier."],
-];
-
-const stats = [
-  ["218%", "Average Increase in Qualified Leads"],
-  ["42%", "Average Reduction in Cost Per Acquisition"],
-  ["76%", "Average Increase in Conversion Rate"],
-  ["95%", "Client Retention Rate"],
+  ["Michael Thompson", "CEO", "BrightPath Learning", "The team at RiotScale is responsive, strategic, and truly invested in helping us clarify the path forward."],
+  ["Rachel Adams", "Marketing Director", "Elevate Fitness", "Their planning process helped us understand what to prioritize, what to test, and what to improve next."],
+  ["David Chen", "Founder", "Summit Financial", "RiotScale brings clarity, creativity, and a structured process to every campaign. They're a true growth partner."],
+  ["Lauren Patel", "Head of Marketing", "Pinecrest Realty", "From SEO to paid search, every recommendation connects back to a goal we can understand and act on."],
+  ["James Walker", "Operations Manager", "ClearWater Plumbing", "Professional, transparent, and goal-focused. RiotScale helped us scale efficiently without wasting budget."],
+  ["Emily Rodriguez", "Growth Marketing Manager", "Northline Home Services", "Their team gave us a clearer process for making decisions and improving the customer journey."],
 ];
 
 const reasons = [
-  ["Results-Driven Strategy", "We focus on what moves the needle and delivers measurable growth."],
-  ["Transparent & Collaborative", "Clear communication, full visibility, and true partnership."],
-  ["Deep Expertise", "A senior team with cross-channel expertise and industry knowledge."],
-  ["Continuous Optimization", "We test, learn, and optimize to compound results over time."],
+  ["Goal-Aligned Strategy", "We start by defining what progress should mean for the business."],
+  ["Process You Can See", "Clear communication, visible priorities, and a practical working rhythm."],
+  ["Deep Strategic Focus", "A senior team with cross-channel expertise and industry knowledge."],
+  ["Continuous Improvement", "We test, learn, and refine the process as the goals evolve."],
 ];
 ---
 
 <BaseLayout
   title="Client Testimonials | RiotScale"
-  description="See how ambitious businesses describe working with RiotScale to improve lead generation, conversion rates, organic traffic, and measurable marketing results."
+  description="See how ambitious businesses describe working with RiotScale to clarify marketing goals, improve their process, and build measurable momentum."
   canonical="/testimonials/"
 >
   <div class="page-shell">
@@ -55,7 +48,8 @@ const reasons = [
             <h1>What our clients say.</h1>
             <p>
               Trusted by ambitious businesses to drive real growth through
-              data-driven marketing, creative strategy, and measurable results.
+              clear goals, creative strategy, and a process built for measurable
+              progress.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href={`${baseUrl}contact/`}>Let's Talk</a>
@@ -73,9 +67,9 @@ const reasons = [
             <div class="featured-quote">
               <span aria-hidden="true">“</span>
               <p>
-                RiotScale completely transformed our lead generation. We saw a
-                218% increase in qualified leads and a 42% reduction in customer
-                acquisition cost in just 6 months.
+                RiotScale helped us turn scattered marketing ideas into a clear
+                plan. The process gave our team better priorities, cleaner
+                decisions, and a stronger sense of what to do next.
               </p>
               <div class="client-row">
                 <span class="client-avatar">JM</span>
@@ -117,7 +111,7 @@ const reasons = [
           {
             testimonials.map(([name, role, company, quote]) => (
               <article class="testimonial-card">
-                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="stars" aria-label="Goal-aligned engagement">Goal-Aligned</div>
                 <p>“{quote}”</p>
                 <div class="client-row">
                   <span class="client-avatar">{name.split(" ").map((part) => part[0]).join("")}</span>
@@ -130,20 +124,6 @@ const reasons = [
             ))
           }
         </div>
-      </section>
-
-      <section class="stats-panel container">
-        {
-          stats.map(([number, label]) => (
-            <article class="stat-item">
-              <span></span>
-              <div>
-                <h2>{number}</h2>
-                <p>{label}</p>
-              </div>
-            </article>
-          ))
-        }
       </section>
 
       <section class="client-reasons container">

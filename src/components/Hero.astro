@@ -16,22 +16,16 @@ const services = [
   },
   {
     icon: "reputation",
-    title: "Reputation Growth",
-    body: "Turn reviews into trust, credibility, and five-star competitors.",
+    title: "Credibility Strategy",
+    body: "Turn brand signals into trust, clarity, and stronger customer confidence.",
   },
   {
     icon: "leads",
-    title: "Lead Capture Systems",
-    body: "Smart lead forms, automations, and CRM that convert more.",
+    title: "Action Planning Systems",
+    body: "Practical workflows, next steps, and measurement habits that keep work moving.",
   },
 ];
 
-const stats = [
-  { value: "100+", label: "Businesses Scaled" },
-  { value: "2.4X", label: "Average ROI Increase" },
-  { value: "$50M+", label: "Revenue Generated" },
-  { value: "4.9", label: "Average Client Rating" },
-];
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -42,8 +36,8 @@ const stats = [
         <span>Maximize Impact.</span>
       </h1>
       <p>
-        We help ambitious businesses unlock growth through data-driven marketing,
-        performance creative, and measurable strategy.
+        We help ambitious businesses clarify growth goals through data-driven
+        strategy, focused creative, and actionable plans.
       </p>
 
       <div class="hero-actions">
@@ -73,14 +67,14 @@ const stats = [
         <b>Send Request</b>
       </div>
       <div class="review-card">
-        <strong>G</strong>
-        <span>4.9 ★★★★★</span>
-        <small>Based on 120+ reviews</small>
+        <strong>R</strong>
+        <span>Goal Map</span>
+        <small>Priorities, timing, and next steps</small>
       </div>
       <div class="leads-card">
-        <span>New Leads</span>
-        <strong>+132</strong>
-        <small>↑ 23% from last month</small>
+        <span>Action Plan</span>
+        <strong>Next Steps</strong>
+        <small>Priorities, owners, and timing</small>
       </div>
     </div>
   </div>
@@ -130,17 +124,4 @@ const stats = [
     }
   </div>
 
-  <div class="stats-band" aria-label="RiotScale results">
-    <div class="stats-inner container">
-      {
-        stats.map((stat) => (
-          <article class="home-stat">
-            <span aria-hidden="true"></span>
-            <strong>{stat.value}</strong>
-            <p>{stat.label}</p>
-          </article>
-        ))
-      }
-    </div>
-  </div>
 </section>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+import FounderPortrait from "../components/FounderPortrait.jsx";
 import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
 import "../styles/global.css";
 
@@ -11,38 +12,31 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
 const values = [
   {
     title: "Strategic",
-    body: "Every decision starts with the business outcome, then moves into channel, creative, and measurement.",
+    body: "Every decision starts with the business goal, then moves into channel, creative, and measurement.",
     icon: "target",
   },
   {
     title: "Transparent",
-    body: "Clear reporting, direct communication, and no mystery metrics hiding behind polished dashboards.",
+    body: "Clear priorities, direct communication, and no mystery work hiding behind polished dashboards.",
     icon: "eye",
   },
   {
     title: "Creative",
-    body: "Performance depends on ideas people notice, remember, and trust enough to act on.",
+    body: "Creative is shaped around what people need to notice, remember, and trust enough to act on.",
     icon: "spark",
   },
   {
-    title: "Performance",
-    body: "We focus on pipeline, revenue, and compounding systems that improve every cycle.",
+    title: "Process",
+    body: "We focus on goals, actionable plans, and systems that improve every cycle.",
     icon: "growth",
   },
 ];
 
-const team = [
-  ["Alex Morgan", "Co-Founder & CEO", "AM"],
-  ["Jamie Lee", "Strategy Director", "JL"],
-  ["Chris Bennett", "Head of Performance", "CB"],
-  ["Maya Patel", "Creative Director", "MP"],
-];
-
 const process = [
-  ["Discover", "We study your market, audience, goals, and current growth engine."],
-  ["Strategize", "We turn the signal into a focused plan across messaging, media, and measurement."],
-  ["Execute", "We launch creative and campaigns with tight feedback loops."],
-  ["Optimize", "We measure what matters, learn quickly, and compound the wins."],
+  ["Discover", "We study your market, audience, goals, and current growth process."],
+  ["Strategize", "We turn the signal into focused priorities across messaging, media, and measurement."],
+  ["Execute", "We move through the plan in clear cycles with tight feedback loops."],
+  ["Optimize", "We measure what matters, learn quickly, and improve the system."],
 ];
 
 const milestones = [
@@ -56,7 +50,7 @@ const milestones = [
 
 <BaseLayout
   title="About RiotScale | Strategic Marketing Partner"
-  description="Learn how RiotScale builds data-driven marketing systems that help ambitious brands grow with clarity, creative strategy, and measurable performance."
+  description="Learn how RiotScale builds goal-driven marketing systems that help ambitious brands grow with clarity, creative strategy, and practical process."
   canonical="/about-us/"
 >
   <div class="page-shell">
@@ -69,9 +63,9 @@ const milestones = [
             <h1>We build marketing systems that help ambitious brands grow.</h1>
             <p>
               RiotScale is a data-driven marketing partner for companies that are
-              ready to scale. We blend strategy, creative, and performance into
-              repeatable systems that attract the right people, convert them into
-              customers, and drive measurable growth.
+              ready to scale. We blend strategy, creative, and process into
+              repeatable systems that clarify the right audience, define the next
+              steps, and support measurable growth.
             </p>
           </div>
 
@@ -90,19 +84,19 @@ const milestones = [
         <div class="story-grid container">
           <div>
             <p class="eyebrow">Our Story</p>
-            <h2>Founded on curiosity. Driven by results. Built for long-term impact.</h2>
+            <h2>Founded on curiosity. Guided by goals. Built for long-term impact.</h2>
           </div>
           <div class="story-copy">
             <p>
               RiotScale began with a simple belief: marketing should do more than
               look good. It should move the needle. After years inside agencies and
               in-house teams, we saw the same problems repeat: fragmented strategy,
-              vanity metrics, and a lack of true partnership.
+              unclear priorities, and a lack of true partnership.
             </p>
             <p>
               We started RiotScale to do things differently. To build a team that
-              cares about the business outcomes behind every campaign, and to create
-              systems that deliver consistent, compounding growth.
+              cares about the business goals behind every campaign, and to create
+              systems that support consistent, compounding growth.
             </p>
           </div>
           <div class="story-copy">
@@ -166,27 +160,10 @@ const milestones = [
         </div>
       </section>
 
-      <section class="about-band">
+      <section class="about-band" id="founder">
         <div class="team-section container">
-          <p class="eyebrow">Meet The Team</p>
-          <div class="team-grid">
-            {
-              team.map(([name, role, initials]) => (
-                <article class="team-card">
-                  <div class="team-portrait">
-                    <span>{initials}</span>
-                  </div>
-                  <div class="team-meta">
-                    <div>
-                      <h3>{name}</h3>
-                      <p>{role}</p>
-                    </div>
-                    <span class="team-link">in</span>
-                  </div>
-                </article>
-              ))
-            }
-          </div>
+          <p class="eyebrow">Meet The Founder</p>
+          <FounderPortrait client:load />
         </div>
       </section>
 
@@ -194,7 +171,7 @@ const milestones = [
         <div class="process-grid container">
           <div class="process-intro">
             <p class="eyebrow">How We Work</p>
-            <h2>What you can expect when you work with us.</h2>
+            <h2>A clear process, built around your goals.</h2>
           </div>
           {
             process.map(([title, body], index) => (
