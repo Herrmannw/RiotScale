@@ -1,0 +1,32 @@
+---
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const currentYear = new Date().getFullYear();
+
+const links = [
+  ["Home", baseUrl],
+  ["About", `${baseUrl}about-us/`],
+  ["Services", `${baseUrl}services/`],
+  ["Contact", `${baseUrl}contact/`],
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <div>
+      <a class="footer-brand" href={baseUrl}>RIOTSCALE</a>
+      <p>Strategic marketing for brands ready to grow with focus.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      {links.map(([label, href]) => <a href={href}>{label}</a>)}
+    </nav>
+
+    <div class="footer-meta">
+      <a href="mailto:hello@riotscale.com">hello@riotscale.com</a>
+      <span>© {currentYear} RiotScale</span>
+    </div>
+  </div>
+</footer>

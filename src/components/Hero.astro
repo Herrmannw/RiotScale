@@ -1,4 +1,6 @@
 ---
+import heroImage from "../../assets/riotscale-hero-visual.png";
+
 const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -7,22 +9,22 @@ const services = [
   {
     icon: "website",
     title: "Website Design",
-    body: "Conversion-focused websites that build trust and drive action.",
+    body: "Clear, credible sites built around conversion.",
   },
   {
     icon: "local",
-    title: "Local SEO",
-    body: "Get found by local searchers and turn them into customers.",
+    title: "SEO",
+    body: "Search visibility tied to business priorities.",
   },
   {
     icon: "reputation",
-    title: "Credibility Strategy",
-    body: "Turn brand signals into trust, clarity, and stronger customer confidence.",
+    title: "Performance Creative",
+    body: "Campaign ideas shaped for attention and action.",
   },
   {
     icon: "leads",
-    title: "Action Planning Systems",
-    body: "Practical workflows, next steps, and measurement habits that keep work moving.",
+    title: "Growth Planning",
+    body: "Focused plans, metrics, and next steps.",
   },
 ];
 
@@ -36,14 +38,14 @@ const services = [
         <span>Maximize Impact.</span>
       </h1>
       <p>
-        We help ambitious businesses clarify growth goals through data-driven
-        strategy, focused creative, and actionable plans.
+        We help ambitious businesses unlock growth through data-driven
+        marketing, performance creative, and measurable strategy.
       </p>
 
       <div class="hero-actions">
         <a class="button button-primary" href={`${baseUrl}services/`}>Explore Our Services</a>
-        <a class="text-link" href={`${baseUrl}testimonials/`}>
-          View Testimonials
+        <a class="text-link" href={`${baseUrl}contact/`}>
+          Start a Conversation
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M5 12h13"></path>
             <path d="m13 6 6 6-6 6"></path>
@@ -53,28 +55,14 @@ const services = [
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <div class="visual-orbit"></div>
-      <div class="browser-card">
-        <div class="browser-top"><span></span><span></span><span></span></div>
-        <div class="business-row"><strong>R</strong><span>Your Business</span></div>
-        <div class="image-placeholder"></div>
-        <div class="content-lines"><span></span><span></span><span></span></div>
-        <div class="thumb-row"><i></i><i></i><i></i></div>
-      </div>
-      <div class="quote-card">
-        <strong>Get a Free Quote</strong>
-        <span></span><span></span><span></span><span></span>
-        <b>Send Request</b>
-      </div>
-      <div class="review-card">
-        <strong>R</strong>
-        <span>Goal Map</span>
-        <small>Priorities, timing, and next steps</small>
-      </div>
-      <div class="leads-card">
-        <span>Action Plan</span>
-        <strong>Next Steps</strong>
-        <small>Priorities, owners, and timing</small>
+      <div class="hero-asset-card">
+        <img
+          src={heroImage.src}
+          alt=""
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
 import "../styles/global.css";
 
@@ -9,27 +10,26 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 
 const services = [
-  ["Website Design", "Clarify the customer journey, define conversion goals, and shape a site experience around the actions that matter.", "monitor"],
-  ["Public Relations", "Set credibility goals, identify the right stories, and build a repeatable process for trust and visibility.", "megaphone"],
-  ["Website Development", "Turn the strategy into a fast, secure site with a clear build process and quality benchmarks.", "code"],
-  ["SEO", "Map search opportunities to business goals, then prioritize technical, content, and authority-building work.", "search"],
-  ["Paid Media", "Build campaigns around acquisition goals, test creative intentionally, and scale what the data supports.", "bars"],
-  ["Analytics & CRO", "Create measurement habits that show what is working and where the process should improve.", "chart"],
+  ["Website Strategy", "Clarify the customer journey and conversion goals before design begins.", "monitor"],
+  ["Website Design", "Create a polished site experience built for trust and action.", "code"],
+  ["SEO", "Prioritize search opportunities that support real business goals.", "search"],
+  ["Paid Media", "Test campaigns intentionally and scale what the data supports.", "bars"],
+  ["Performance Creative", "Shape messages and assets around attention, clarity, and action.", "megaphone"],
+  ["Analytics & CRO", "Measure what matters and improve the path to conversion.", "chart"],
 ];
 
 const process = [
-  ["Discover", "We clarify your business goals, audience, and current growth process."],
-  ["Strategize", "We translate those goals into priorities, milestones, and success metrics."],
-  ["Execute", "We move through the plan in focused cycles with clear ownership and timing."],
-  ["Analyze", "We review progress against the goal, then identify what needs to change."],
-  ["Optimize", "We refine the process, scale what works, and keep the next goal visible."],
+  ["Discover", "Clarify goals, audience, and current gaps."],
+  ["Strategize", "Turn the signal into priorities and success metrics."],
+  ["Execute", "Move through the plan in focused cycles."],
+  ["Optimize", "Review, learn, and improve the system."],
 ];
 
 const goals = [
-  ["Clear Goals", "Define what growth should mean before choosing channels or tactics."],
-  ["Focused Plan", "Prioritize the moves most likely to create measurable momentum."],
-  ["Steady Rhythm", "Use a practical working cadence that keeps strategy moving."],
-  ["Sharper Scale", "Review, learn, and improve the process as the goals evolve."],
+  ["Clarity", "Know what matters first."],
+  ["Focus", "Spend effort where it can move the needle."],
+  ["Rhythm", "Keep decisions and execution moving."],
+  ["Scale", "Improve the system as momentum builds."],
 ];
 ---
 
@@ -47,14 +47,13 @@ const goals = [
             <p class="eyebrow">/ Services</p>
             <h1>Marketing Built Around Goals And Process.</h1>
             <p>
-              We partner with ambitious brands to clarify what growth should
-              look like, build the process to pursue it, and improve the systems
-              that make progress measurable.
+              Strategy, creative, web, search, and measurement arranged around
+              the outcomes your business needs most.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href={`${baseUrl}contact/`}>Let's Talk About Your Growth</a>
-              <a class="text-link" href={`${baseUrl}testimonials/`}>
-                View Testimonials
+              <a class="button button-primary" href={`${baseUrl}contact/`}>Let's Talk</a>
+              <a class="text-link" href={`${baseUrl}about-us/`}>
+                About RiotScale
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h13"></path>
                   <path d="m13 6 6 6-6 6"></path>
@@ -63,36 +62,8 @@ const goals = [
             </div>
           </div>
 
-          <div class="device-showcase" aria-label="Website and mobile preview placeholder">
-            <div class="laptop-frame">
-              <div class="mock-nav">
-                <span>RIOTSCALE</span>
-                <small>Work</small>
-                <small>Services</small>
-                <small>About</small>
-              </div>
-              <h2>Clear Goals. Steady Growth.</h2>
-              <p>A focused process for brands ready to scale with intention.</p>
-              <div class="mock-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="phone-frame">
-              <p>Goals.<br />Process.<br />Progress.</p>
-              <span></span>
-            </div>
-            <aside class="media-card media-card-top">
-              <small>Process Focus</small>
-              <strong>Goals</strong>
-              <strong>Clarity</strong>
-            </aside>
-            <aside class="media-card media-card-bottom">
-              <small>Planning Rhythm</small>
-              <strong>Weekly</strong>
-              <span>Review Cycle</span>
-            </aside>
+          <div class="services-visual" aria-hidden="true">
+            <img src={blocksImage.src} alt="" loading="eager" decoding="async" />
           </div>
         </div>
       </section>
@@ -104,9 +75,8 @@ const goals = [
             <h2>Growth Goals With A Clear Process</h2>
           </div>
           <p>
-            Every engagement starts with the goal you want, then becomes a
-            practical operating plan across strategy, creative, media, and
-            measurement.
+            Every engagement starts with the result you want, then becomes a
+            focused operating plan.
           </p>
         </div>
 
@@ -158,7 +128,7 @@ const goals = [
                 <div>
                   <h3>{title}</h3>
                   <p>{body}</p>
-                  <a class="mini-link" href={`${baseUrl}contact/`}>Learn More <span aria-hidden="true">-></span></a>
+                  <a class="mini-link" href={`${baseUrl}contact/`}>Start Here <span aria-hidden="true">-></span></a>
                 </div>
               </article>
             ))
@@ -173,8 +143,8 @@ const goals = [
             <h2>A Clear Process. Visible Progress.</h2>
           </div>
           <p>
-            Our methodology keeps the goal in view while strategy, creative,
-            data, and continuous optimization move together.
+            A simple rhythm keeps strategy, creative, and measurement moving
+            together.
           </p>
         </div>
         <div class="service-process-steps">
@@ -211,14 +181,13 @@ const goals = [
           <p class="eyebrow">/ Ready To Grow?</p>
           <h2>Let's Build What's Next.</h2>
           <p>
-            Tell us about your goals and we'll show you how RiotScale can help
-            you achieve them.
+            Tell us what you want to improve. We'll help map the next move.
           </p>
         </div>
         <div class="hero-actions">
           <a class="button button-secondary" href={`${baseUrl}contact/`}>Let's Talk</a>
-          <a class="text-link" href={`${baseUrl}testimonials/`}>
-            See Testimonials
+          <a class="text-link" href={`${baseUrl}about-us/`}>
+            About RiotScale
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h13"></path>
               <path d="m13 6 6 6-6 6"></path>
@@ -228,5 +197,6 @@ const goals = [
         <img src={blocksImage.src} alt="" loading="lazy" decoding="async" />
       </section>
     </main>
+    <Footer />
   </div>
 </BaseLayout>

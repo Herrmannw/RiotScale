@@ -1,19 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
-const baseUrl = import.meta.env.BASE_URL.endsWith("/")
-  ? import.meta.env.BASE_URL
-  : `${import.meta.env.BASE_URL}/`;
-
-const redirectUrl = `${baseUrl}thank-you/`;
+const contactEmail = "hello@riotscale.com";
+const mailtoAction = `mailto:${contactEmail}?subject=RiotScale%20Growth%20Inquiry`;
 const services = [
   "Website Design",
   "SEO",
-  "Google Business Profile",
+  "Paid Media",
+  "Performance Creative",
   "Growth Planning",
-  "Automation",
   "Not Sure Yet",
 ];
 ---
@@ -30,18 +28,15 @@ const services = [
         <div class="contact-inner container">
           <div class="contact-copy">
             <p class="eyebrow">Contact</p>
-            <h1>Let's figure out what your business needs online.</h1>
+            <h1>Let's talk about your next growth move.</h1>
             <p>
-              Tell us what you're trying to improve. We'll review your current
-              digital presence and reach out with next steps.
+              Share what you want to improve and we'll help identify a focused
+              next step.
             </p>
+            <a class="contact-email" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
 
-          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-            <input type="hidden" name="subject" value="New Riotscale Inquiry" />
-            <input type="hidden" name="from_name" value="Riotscale Website" />
-            <input type="hidden" name="redirect" value={redirectUrl} />
+          <form class="contact-form" action={mailtoAction} method="post" enctype="text/plain">
             <input type="checkbox" name="botcheck" style="display: none;" />
 
             <div class="form-grid">
@@ -84,10 +79,15 @@ const services = [
               <textarea name="message" rows="6" required></textarea>
             </label>
 
-            <button class="button button-primary" type="submit">Send Message</button>
+            <button class="button button-primary" type="submit">Prepare Email</button>
+            <p class="form-note">
+              This static form opens your email app so no message is lost before
+              a form provider is connected.
+            </p>
           </form>
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 </BaseLayout>
