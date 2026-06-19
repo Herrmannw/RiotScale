@@ -11,6 +11,8 @@ const navItems = [
   { label: "Services", href: pageHref("services/") },
   { label: "Contact", href: pageHref("contact/") },
 ];
+
+const contactHref = pageHref("contact/");
 ---
 
 <header class="navbar" aria-label="Primary navigation">
@@ -27,6 +29,8 @@ const navItems = [
       }
     </nav>
 
+    <a class="button button-primary nav-cta" href={contactHref}>Let's Talk</a>
+
     <details class="mobile-menu">
       <summary aria-label="Open navigation menu">
         <span></span>
@@ -42,6 +46,7 @@ const navItems = [
             </a>
           ))
         }
+        <a class="button button-primary mobile-menu-cta" href={contactHref}>Let's Talk</a>
       </nav>
     </details>
   </div>

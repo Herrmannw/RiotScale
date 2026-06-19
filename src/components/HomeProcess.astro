@@ -1,0 +1,46 @@
+---
+const steps = [
+  {
+    title: "Discover",
+    body: "Clarify the goals, audience, offer, funnel, and current gaps.",
+  },
+  {
+    title: "Strategize",
+    body: "Turn that signal into priorities, channel roles, and success markers.",
+  },
+  {
+    title: "Execute",
+    body: "Move through focused cycles across creative, web, search, and media.",
+  },
+  {
+    title: "Optimize",
+    body: "Review what changed, keep what works, and refine the next move.",
+  },
+];
+---
+
+<section class="home-process" aria-labelledby="home-process-title">
+  <div class="home-process-inner container">
+    <div class="home-process-copy">
+      <p class="eyebrow">/ How We Work</p>
+      <h2 id="home-process-title">A clear rhythm from signal to scale.</h2>
+      <p>
+        The work stays practical: understand the business, choose the highest
+        leverage moves, execute cleanly, and keep improving from what the market
+        shows you.
+      </p>
+    </div>
+
+    <div class="home-process-steps">
+      {
+        steps.map((step, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

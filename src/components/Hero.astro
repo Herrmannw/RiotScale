@@ -67,49 +67,51 @@ const services = [
     </div>
   </div>
 
-  <div class="service-strip container" aria-label="Core services">
-    {
-      services.map((service) => (
-        <article class="service-tile">
-          <span class="service-symbol" aria-hidden="true">
-            {service.icon === "website" && (
-              <svg viewBox="0 0 32 32">
-                <rect x="5" y="7" width="22" height="16" rx="1.8"></rect>
-                <path d="M12 27h8"></path>
-                <path d="M16 23v4"></path>
-                <path d="M9 12h5"></path>
-                <path d="M9 16h10"></path>
-                <path d="M22 12h1"></path>
-              </svg>
-            )}
-            {service.icon === "local" && (
-              <svg viewBox="0 0 32 32">
-                <path d="M16 28s8-7.6 8-15a8 8 0 0 0-16 0c0 7.4 8 15 8 15Z"></path>
-                <circle cx="16" cy="13" r="3"></circle>
-              </svg>
-            )}
-            {service.icon === "reputation" && (
-              <svg viewBox="0 0 32 32">
-                <path d="M6 14h7l9-5v14l-9-5H6v-4Z"></path>
-                <path d="M13 18v6"></path>
-                <path d="M25 13c1.2 1.8 1.2 4.2 0 6"></path>
-              </svg>
-            )}
-            {service.icon === "leads" && (
-              <svg viewBox="0 0 32 32">
-                <path d="M9 6v10a7 7 0 0 0 14 0V6"></path>
-                <path d="M9 6h5"></path>
-                <path d="M18 6h5"></path>
-                <path d="M9 11h5"></path>
-                <path d="M18 11h5"></path>
-              </svg>
-            )}
-          </span>
-          <h2>{service.title}</h2>
-          <p>{service.body}</p>
-        </article>
-      ))
-    }
+  <div class="capability-band" aria-label="Core services">
+    <div class="service-strip container">
+      {
+        services.map((service) => (
+          <article class="service-tile">
+            <span class="service-symbol" aria-hidden="true">
+              {service.icon === "website" && (
+                <svg viewBox="0 0 32 32">
+                  <rect x="5" y="7" width="22" height="16" rx="1.8"></rect>
+                  <path d="M12 27h8"></path>
+                  <path d="M16 23v4"></path>
+                  <path d="M9 12h5"></path>
+                  <path d="M9 16h10"></path>
+                  <path d="M22 12h1"></path>
+                </svg>
+              )}
+              {service.icon === "local" && (
+                <svg viewBox="0 0 32 32">
+                  <path d="M16 28s8-7.6 8-15a8 8 0 0 0-16 0c0 7.4 8 15 8 15Z"></path>
+                  <circle cx="16" cy="13" r="3"></circle>
+                </svg>
+              )}
+              {service.icon === "reputation" && (
+                <svg viewBox="0 0 32 32">
+                  <path d="M6 14h7l9-5v14l-9-5H6v-4Z"></path>
+                  <path d="M13 18v6"></path>
+                  <path d="M25 13c1.2 1.8 1.2 4.2 0 6"></path>
+                </svg>
+              )}
+              {service.icon === "leads" && (
+                <svg viewBox="0 0 32 32">
+                  <path d="M9 6v10a7 7 0 0 0 14 0V6"></path>
+                  <path d="M9 6h5"></path>
+                  <path d="M18 6h5"></path>
+                  <path d="M9 11h5"></path>
+                  <path d="M18 11h5"></path>
+                </svg>
+              )}
+            </span>
+            <h2>{service.title}</h2>
+            <p>{service.body}</p>
+          </article>
+        ))
+      }
+    </div>
   </div>
 
 </section>

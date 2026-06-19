@@ -1,0 +1,45 @@
+---
+const outcomes = [
+  {
+    title: "Clearer Positioning",
+    body: "Sharper messaging around who you serve, what you offer, and why it matters.",
+  },
+  {
+    title: "Stronger Acquisition Paths",
+    body: "Cleaner routes from attention to action across your site, search, and campaigns.",
+  },
+  {
+    title: "Useful Reporting",
+    body: "A simpler view of what is happening so decisions are easier to make.",
+  },
+  {
+    title: "Better Iteration Rhythm",
+    body: "A practical cadence for learning, improving, and choosing the next move.",
+  },
+];
+---
+
+<section class="home-outcomes" aria-labelledby="home-outcomes-title">
+  <div class="home-outcomes-inner container">
+    <div class="home-section-header home-section-header-left">
+      <p class="eyebrow">/ What Improves</p>
+      <h2 id="home-outcomes-title">Built for marketing that becomes easier to steer.</h2>
+      <p>
+        The goal is not more noise. It is a clearer system your team can
+        understand, improve, and use with confidence.
+      </p>
+    </div>
+
+    <div class="home-outcome-grid">
+      {
+        outcomes.map((outcome) => (
+          <article class="home-outcome-card">
+            <span aria-hidden="true"></span>
+            <h3>{outcome.title}</h3>
+            <p>{outcome.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
