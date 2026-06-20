@@ -2,7 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import aboutHeroImage from "../../assets/about-hero-systems-blueprint.png";
 import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
+import storyImage from "../../assets/why-strategy-table.png";
 import "../styles/global.css";
 
 const baseUrl = import.meta.env.BASE_URL.endsWith("/")
@@ -59,8 +61,13 @@ const process = [
             </p>
           </div>
 
-          <div class="about-blocks-card" aria-hidden="true">
-            <img src={blocksImage.src} alt="" loading="eager" decoding="async" />
+          <div class="about-blocks-card about-hero-visual-frame">
+            <img
+              src={aboutHeroImage.src}
+              alt="Marketing systems blueprint with wireframe cards, planning notes, and burgundy connection paths."
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -86,6 +93,15 @@ const process = [
             </p>
           </div>
         </div>
+
+        <figure class="story-visual generated-image-frame container">
+          <img
+            src={storyImage.src}
+            alt="Strategy table with website mockups, campaign notes, and burgundy planning annotations."
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       </section>
 
       <section class="about-band values-band">

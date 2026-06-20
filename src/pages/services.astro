@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
+import servicesHeroImage from "../../assets/why-planning-board.png";
 import "../styles/global.css";
 
 const baseUrl = import.meta.env.BASE_URL.endsWith("/")
@@ -62,8 +63,13 @@ const goals = [
             </div>
           </div>
 
-          <div class="services-visual" aria-hidden="true">
-            <img src={blocksImage.src} alt="" loading="eager" decoding="async" />
+          <div class="services-visual generated-image-frame">
+            <img
+              src={servicesHeroImage.src}
+              alt="Planning board with wireframes, campaign notes, and burgundy strategy marks."
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
