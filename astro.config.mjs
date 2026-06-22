@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://herrmannw.github.io",
-  base: "/RiotScale",
+  site: "https://riotscale.io",
+  base: "/",
 });

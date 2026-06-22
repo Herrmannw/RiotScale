@@ -4,8 +4,15 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
-const contactEmail = "hello@riotscale.com";
-const mailtoAction = `mailto:${contactEmail}?subject=RiotScale%20Growth%20Inquiry`;
+const contactEmail = "youngwill9455@gmail.com";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const formAction = `https://formsubmit.co/${contactEmail}`;
+const thankYouUrl = new URL(
+  `${baseUrl}thank-you/`,
+  Astro.site ?? "https://riotscale.io"
+).toString();
 const services = [
   "Website Design",
   "SEO",
@@ -33,11 +40,13 @@ const services = [
               Share what you want to improve and we'll help identify a focused
               next step.
             </p>
-            <a class="contact-email" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
 
-          <form class="contact-form" action={mailtoAction} method="post" enctype="text/plain">
-            <input type="checkbox" name="botcheck" style="display: none;" />
+          <form class="contact-form" action={formAction} method="post">
+            <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="New RiotScale Growth Inquiry" />
+            <input type="hidden" name="_next" value={thankYouUrl} />
+            <input type="hidden" name="_template" value="table" />
 
             <div class="form-grid">
               <label>
@@ -79,10 +88,9 @@ const services = [
               <textarea name="message" rows="6" required></textarea>
             </label>
 
-            <button class="button button-primary" type="submit">Prepare Email</button>
+            <button class="button button-primary" type="submit">Send Message</button>
             <p class="form-note">
-              This static form opens your email app so no message is lost before
-              a form provider is connected.
+              Your details will be sent to the RiotScale team for review.
             </p>
           </form>
         </div>

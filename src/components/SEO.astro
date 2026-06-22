@@ -14,7 +14,7 @@ const {
   twitterCard = "summary_large_image",
 } = Astro.props;
 
-const defaultSiteUrl = "https://riotscale.com";
+const defaultSiteUrl = "https://riotscale.io";
 const siteUrl = Astro.site ?? new URL(defaultSiteUrl);
 const basePath = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL

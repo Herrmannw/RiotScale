@@ -605,14 +605,6 @@ main {
   line-height: 1.72;
 }
 
-.contact-email {
-  display: inline-flex;
-  margin-top: 1.4rem;
-  color: var(--wine);
-  font-size: 0.94rem;
-  font-weight: 900;
-}
-
 .contact-form {
   padding: clamp(1.6rem, 2.6vw, 2.6rem);
   border: 1px solid rgba(53, 0, 13, 0.1);
