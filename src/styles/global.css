@@ -84,9 +84,16 @@ main {
 }
 
 .brand {
-  font-size: clamp(1.1rem, 0.8vw + 0.9rem, 1.45rem);
-  font-weight: 900;
-  letter-spacing: 0;
+  display: inline-flex;
+  width: clamp(2.35rem, 2.2vw + 1.7rem, 3.35rem);
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0.35rem 0.85rem rgba(0, 0, 0, 0.22));
 }
 
 .nav-links,

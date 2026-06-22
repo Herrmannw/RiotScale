@@ -1,4 +1,6 @@
 ---
+import headerLogo from "../../assets/riotscale-header-logo.png";
+
 const baseUrl = import.meta.env.BASE_URL;
 const pageHref = (path = "") => {
   const base = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
@@ -17,7 +19,9 @@ const contactHref = pageHref("contact/");
 
 <header class="navbar" aria-label="Primary navigation">
   <div class="navbar-inner container">
-    <a class="brand" href={pageHref()} aria-label="RiotScale home">RIOTSCALE</a>
+    <a class="brand" href={pageHref()} aria-label="RiotScale home">
+      <img src={headerLogo.src} alt="" loading="eager" decoding="async" />
+    </a>
 
     <nav class="nav-links" aria-label="Main menu">
       {
