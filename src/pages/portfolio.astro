@@ -43,6 +43,7 @@ const projects = [
     href: "https://www.clubicetexas.com/",
     image: clubIceImage,
     alt: "Club Ice Texas website portfolio screenshot.",
+    mediaClass: "portfolio-project-media--club-ice",
   },
 ];
 
@@ -150,7 +151,7 @@ const results = [
           {
             projects.map((project, index) => (
               <article class={`portfolio-project${index % 2 === 1 ? " portfolio-project-reverse" : ""}`}>
-                <figure class="portfolio-project-media">
+                <figure class={`portfolio-project-media ${project.mediaClass ?? ""}`.trim()}>
                   <img
                     src={project.image.src}
                     alt={project.alt}
