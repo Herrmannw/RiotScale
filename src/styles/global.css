@@ -1161,23 +1161,8 @@ main {
   padding: clamp(1.2rem, 2.8vw, 2.8rem);
 }
 
-.portfolio-project-index {
-  display: inline-flex;
-  width: fit-content;
-  min-height: 1.95rem;
-  align-items: center;
-  border: 1px solid rgba(180, 0, 54, 0.2);
-  border-radius: 999px;
-  padding: 0.25rem 0.72rem;
-  color: var(--rose);
-  background: rgba(180, 0, 54, 0.06);
-  font-size: 0.74rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
 .portfolio-project-copy .eyebrow {
-  margin-top: 1.25rem;
+  margin-top: 0;
 }
 
 .portfolio-project-copy h3 {

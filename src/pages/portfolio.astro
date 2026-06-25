@@ -4,8 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
 import heroImage from "../../assets/portfolio/portfolio-hero-system.png";
-import lmoImage from "../../assets/portfolio/lmo-heating-cooling.jpg";
-import legacyImage from "../../assets/portfolio/legacy-collision-repair.png";
+import lmoImage from "../../assets/portfolio/lmo-hvac-tech-generated.jpg";
 import clubIceImage from "../../assets/portfolio/club-ice-texas.jpg";
 import "../styles/global.css";
 
@@ -22,17 +21,7 @@ const projects = [
       "A full digital presence built to drive local leads. The work included a conversion-focused website, Google Business Profile optimization, SEO best practices, and Facebook marketing guidance to support ongoing growth.",
     href: "https://lmoheatingandcooling.pro/",
     image: lmoImage,
-    alt: "L Mo Heating and Cooling website portfolio screenshot.",
-  },
-  {
-    name: "Legacy Collision Repair",
-    industry: "Auto Body / Collision Repair",
-    services: ["Website Creation", "Brand Identity", "Local Search", "Print Collateral"],
-    summary:
-      "A complete brand and web rebuild designed to establish credibility and attract new customers. The system included website creation, Google Business Profile setup, logo design, business cards, and branded marketing flyers.",
-    href: "https://legacycollisionrepair.pro/",
-    image: legacyImage,
-    alt: "Legacy Collision Repair website and brand portfolio screenshot.",
+    alt: "HVAC technician inspecting commercial ductwork and equipment.",
   },
   {
     name: "Club Ice Texas",
@@ -57,28 +46,6 @@ const results = [
       ["3.4K", "profile views"],
       ["1.2K", "customer interactions"],
       ["494", "Google searches"],
-    ],
-  },
-  {
-    title: "Cena Services LLC",
-    category: "GBP Optimization",
-    body:
-      "Local profile improvements helped the business gain more visibility across Houston and Tomball searches.",
-    metrics: [
-      ["444", "profile views"],
-      ["50", "Google searches"],
-      ["24", "customer interactions"],
-    ],
-  },
-  {
-    title: "Legacy Collision Repair",
-    category: "Profile Engagement",
-    body:
-      "A created and optimized Google Business Profile improved engagement from customers searching for collision repair.",
-    metrics: [
-      ["180", "profile views"],
-      ["87", "customer interactions"],
-      ["50", "searches"],
     ],
   },
   {
@@ -161,7 +128,6 @@ const results = [
                 </figure>
 
                 <div class="portfolio-project-copy">
-                  <span class="portfolio-project-index">{String(index + 1).padStart(2, "0")}</span>
                   <p class="eyebrow">{project.industry}</p>
                   <h3>{project.name}</h3>
                   <p>{project.summary}</p>
