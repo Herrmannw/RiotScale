@@ -1,0 +1,245 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import blocksImage from "../../assets/ChatGPT Image May 16, 2026, 04_27_05 PM (1).png";
+import heroImage from "../../assets/portfolio/portfolio-hero-system.png";
+import lmoImage from "../../assets/portfolio/lmo-heating-cooling.jpg";
+import legacyImage from "../../assets/portfolio/legacy-collision-repair.png";
+import clubIceImage from "../../assets/portfolio/club-ice-texas.jpg";
+import "../styles/global.css";
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const projects = [
+  {
+    name: "L Mo Heating & Cooling",
+    industry: "HVAC",
+    services: ["Website Design", "Local SEO", "Google Business Profile", "Marketing Enablement"],
+    summary:
+      "A full digital presence built to drive local leads. The work included a conversion-focused website, Google Business Profile optimization, SEO best practices, and Facebook marketing guidance to support ongoing growth.",
+    href: "https://lmoheatingandcooling.pro/",
+    image: lmoImage,
+    alt: "L Mo Heating and Cooling website portfolio screenshot.",
+  },
+  {
+    name: "Legacy Collision Repair",
+    industry: "Auto Body / Collision Repair",
+    services: ["Website Creation", "Brand Identity", "Local Search", "Print Collateral"],
+    summary:
+      "A complete brand and web rebuild designed to establish credibility and attract new customers. The system included website creation, Google Business Profile setup, logo design, business cards, and branded marketing flyers.",
+    href: "https://legacycollisionrepair.pro/",
+    image: legacyImage,
+    alt: "Legacy Collision Repair website and brand portfolio screenshot.",
+  },
+  {
+    name: "Club Ice Texas",
+    industry: "Ice Manufacturing & Distribution",
+    services: ["Custom Website", "Google Business Profile", "Lead Generation", "Search Structure"],
+    summary:
+      "A strategic digital build structured for scalability, search visibility, and lead generation across multiple service areas, supported by a custom website and optimized local search presence.",
+    href: "https://www.clubicetexas.com/",
+    image: clubIceImage,
+    alt: "Club Ice Texas website portfolio screenshot.",
+  },
+];
+
+const results = [
+  {
+    title: "Lone Star Air Systems",
+    category: "Local SEO Growth",
+    body:
+      "Targeted Google Business Profile optimization helped increase local HVAC search visibility and customer engagement.",
+    metrics: [
+      ["3.4K", "profile views"],
+      ["1.2K", "customer interactions"],
+      ["494", "Google searches"],
+    ],
+  },
+  {
+    title: "Cena Services LLC",
+    category: "GBP Optimization",
+    body:
+      "Local profile improvements helped the business gain more visibility across Houston and Tomball searches.",
+    metrics: [
+      ["444", "profile views"],
+      ["50", "Google searches"],
+      ["24", "customer interactions"],
+    ],
+  },
+  {
+    title: "Legacy Collision Repair",
+    category: "Profile Engagement",
+    body:
+      "A created and optimized Google Business Profile improved engagement from customers searching for collision repair.",
+    metrics: [
+      ["180", "profile views"],
+      ["87", "customer interactions"],
+      ["50", "searches"],
+    ],
+  },
+  {
+    title: "LMO Heating & Cooling",
+    category: "Visibility Improvement",
+    body:
+      "Ongoing profile updates helped strengthen the company's presence in Houston and Richmond HVAC search results.",
+    metrics: [
+      ["326", "views"],
+      ["50", "searches"],
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Portfolio | RiotScale Marketing Work & Local Growth Results"
+  description="Explore RiotScale portfolio work across websites, local SEO, Google Business Profile optimization, and measurable marketing growth for local businesses."
+  canonical="/portfolio/"
+>
+  <div class="page-shell">
+    <Navbar />
+    <main>
+      <section class="portfolio-hero">
+        <div class="portfolio-hero-inner container">
+          <div class="portfolio-copy">
+            <p class="eyebrow">Portfolio</p>
+            <h1>Work Built To Convert. Designed To Scale.</h1>
+            <p>
+              A look at the customer work brought forward through the rebrand:
+              stronger websites, sharper local search visibility, and marketing
+              systems built around measurable growth.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href={`${baseUrl}contact/`}>Start a Project</a>
+              <a class="text-link" href={`${baseUrl}services/`}>
+                Explore Services
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13"></path>
+                  <path d="m13 6 6 6-6 6"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-hero-visual generated-image-frame">
+            <img
+              src={heroImage.src}
+              alt="Abstract portfolio system with floating case study cards, performance panels, and burgundy strategy lines."
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-section" aria-labelledby="portfolio-featured-title">
+        <div class="portfolio-intro container">
+          <div>
+            <p class="eyebrow">Featured Work</p>
+            <h2 id="portfolio-featured-title">Digital Presence Built For Local Growth</h2>
+          </div>
+          <p>
+            Each engagement centered the same priorities: credibility, search
+            visibility, and a clearer path from customer attention to action.
+          </p>
+        </div>
+
+        <div class="portfolio-project-list container">
+          {
+            projects.map((project, index) => (
+              <article class={`portfolio-project${index % 2 === 1 ? " portfolio-project-reverse" : ""}`}>
+                <figure class="portfolio-project-media">
+                  <img
+                    src={project.image.src}
+                    alt={project.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                  />
+                </figure>
+
+                <div class="portfolio-project-copy">
+                  <span class="portfolio-project-index">{String(index + 1).padStart(2, "0")}</span>
+                  <p class="eyebrow">{project.industry}</p>
+                  <h3>{project.name}</h3>
+                  <p>{project.summary}</p>
+                  <div class="portfolio-service-list" aria-label={`${project.name} services`}>
+                    {project.services.map((service) => <span>{service}</span>)}
+                  </div>
+                  <a
+                    class="mini-link portfolio-external-link"
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project <span aria-hidden="true">-&gt;</span>
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="portfolio-results" aria-labelledby="portfolio-results-title">
+        <div class="portfolio-results-inner container">
+          <div class="portfolio-results-copy">
+            <p class="eyebrow">Measured Results</p>
+            <h2 id="portfolio-results-title">Visibility That Turns Into Action</h2>
+            <p>
+              Google Business Profile optimization created stronger local
+              search presence and measurable customer engagement across service
+              businesses.
+            </p>
+          </div>
+
+          <div class="portfolio-results-grid">
+            {
+              results.map((result) => (
+                <article class="portfolio-result-card">
+                  <span>{result.category}</span>
+                  <h3>{result.title}</h3>
+                  <p>{result.body}</p>
+                  <dl class="portfolio-metrics">
+                    {
+                      result.metrics.map(([value, label]) => (
+                        <div>
+                          <dt>{value}</dt>
+                          <dd>{label}</dd>
+                        </div>
+                      ))
+                    }
+                  </dl>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="services-cta portfolio-final-cta container">
+        <div>
+          <p class="eyebrow">Ready To Grow?</p>
+          <h2>Let's Build Your Next Growth System.</h2>
+          <p>
+            Bring us the business goal. We'll help shape the strategy, website,
+            creative, and measurement needed to move it forward.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-secondary" href={`${baseUrl}contact/`}>Let's Talk</a>
+          <a class="text-link" href={`${baseUrl}services/`}>
+            Explore Services
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+        <img src={blocksImage.src} alt="" loading="lazy" decoding="async" />
+      </section>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>
